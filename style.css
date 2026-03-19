@@ -1,0 +1,150 @@
+body {
+  font-family: 'Courier New', monospace;
+}
+
+.conteneur {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#strengthBar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  background-color: #ddd;
+  background-image: linear-gradient(to left, red , yellow);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+#strengthScore {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold, 400;
+  font-family: Oxygen;
+  font-style: normal;
+  color: #222;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.8);
+  pointer-events: none;
+}
+
+.input {
+  width: 95%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#inputMdp {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#voirLeMdp {
+    margin-top: 10px;
+    padding: 5px 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3a3939;
+    color: white;
+    cursor: pointer;
+}
+
+#analyzeBtn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3ac4ee;
+    color: white;
+    cursor: pointer;
+}
+
+#analyzeBtn:hover {
+    background-color: #2b9db8;
+}
+
+#crackTime {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #333;
+}
+
+#tips {
+  margin-top: 20px;
+  list-style-type: none;
+  padding-left: 0;
+}
+#tips li {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+#gifContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: auto;
+}
+
+#gifContainer2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: auto;
+}
+
+@keyframes slidein {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Animation spéciale pour le gifSixseven */
+.sixseven-gif {
+  animation: sixsevenPulse 2s ease-in-out infinite;
+  display: inline-block;
+  transform-origin: center;
+}
+
+@keyframes sixsevenPulse {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+    filter: brightness(1);
+  }
+  50% {
+    transform: scale(1.4) rotate(180deg);
+    filter: brightness(1.3) drop-shadow(0 0 20px rgba(255, 215, 0, 0.8));
+  }
+  100% {
+    transform: scale(1) rotate(360deg);
+    filter: brightness(1);
+  }
+  
+}
+

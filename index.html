@@ -1,0 +1,38 @@
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Analyseur de Mot de Passe</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="conteneur">
+            <header>
+                <h1>Analyseur de Mot de Passe</h1>
+                <p>Cette page à pour but d'analyser la force d'un mot de passe que vous allez entrer, 
+                    puis donner un résultat (avec humour bien sûr). <strong>Les valeurs affichées ne
+                    sont pas exactes</strong>, ne pensez pas qu'il faut les prendre au sérieux.</p>
+            </header>
+
+            <div class="input">    
+                <input type =password id="inputMdp" placeholder= "Ne faites pas le timide... entrez un mot de passe !"/>
+                <button id="voirLeMdp">👁️</button>
+                <button id="analyzeBtn">Analyser 🔬</button>
+                <span id="charCount"> caractères</span>
+            </div>
+
+            <div class="strenght-Bar">
+                <div class="BarreDeForce" id="strengthBar">
+                    <span id="strengthScore">%</span>
+                </div>
+            </div>
+
+            <ul id="tips"> </ul>
+            <div id="gifContainer"></div>
+
+            <p id="crackTime">⌛ Temps estimé pour trouver votre magnifique mot de passe : <strong></strong></p>
+            <div id = "gifContainer2"> </div>        
+        </div>
+        <script src="app.js" defer></script>
+    </body>
+</html>
