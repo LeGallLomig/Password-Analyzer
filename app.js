@@ -167,6 +167,18 @@ function estimateCrackTime(mdp) { //fonction qui estime le temps nécessaire pou
 
     return { text, gifName };
 }
+
+function generatePassword(length = 16){ //fonction qui génère une mot de passe fort aléatoire
+    const chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+~`|}{[]:;?><,./-=";
+    let password = "";
+    const array = new Uint32Array(length);
+    window.crypto.getRandomValues(array);
+    for(let i = 0; i < length; i++){
+        password += chars[array[i] % chars.length];
+    }
+    return password;
+}
+
 function updateCharCount(mdp) { //fonction qui met à jour le nombre de caractères affichés
     const len = mdp.length;
     document.getElementById('charCount').textContent =
@@ -207,6 +219,13 @@ function updateUI(mdp) { //fonction permettant de mettre à jour l'interface en 
 const inputEl = document.getElementById("inputMdp");
 const analyzeBtn = document.getElementById("analyzeBtn");
 const voirLeMdp = document.getElementById("voirLeMdp");
+const generatePwdBtn = document.getElementById("generatePwd");
+
+generatePwdBtn.addEventListener("click", function() { //fonction qui génère un mot de passe aléatoire et l'affiche
+    const password = generatePassword();
+    document.getElementById("generatedPwd").innerHTML = `<strong>${password}</strong>`;
+});
+
 
 inputEl.addEventListener("input", function() { //fonction qui met à jour le nombre de caractères en temps réel
     updateCharCount(this.value);

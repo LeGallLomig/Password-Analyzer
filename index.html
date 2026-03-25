@@ -8,7 +8,7 @@
     <body>
         <div class="conteneur">
             <header>
-                <h1>Analyseur de Mot de Passe</h1>
+                <h1>Analyseur de Mot de Passe 🔒</h1>
                 <p>Cette page à pour but d'analyser la force d'un mot de passe que vous allez entrer, 
                     puis donner un résultat (avec humour bien sûr). <strong>Les valeurs affichées ne
                     sont pas exactes</strong>, ne pensez pas qu'il faut les prendre au sérieux.</p>
@@ -31,7 +31,21 @@
             <div id="gifContainer"></div>
 
             <p id="crackTime">⌛ Temps estimé pour trouver votre magnifique mot de passe : <strong></strong></p>
-            <div id = "gifContainer2"> </div>        
+            <div id = "gifContainer2"> </div>
+            
+            <div class="input">
+                <a id="generatePwd" href="javascript:void(0);">
+                    <span>Cliquez 🔐</span>
+                    <span></span>
+                    <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                </a>
+                <p>Et voici comment on fait un vrai mot de passe :</p>
+                <p id="generatedPwd"></p>
+            </div>
         </div>
         <script src="app.js" defer></script>
     </body>
