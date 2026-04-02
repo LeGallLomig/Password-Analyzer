@@ -169,7 +169,7 @@ function estimateCrackTime(mdp) { //fonction qui estime le temps nécessaire pou
 }
 
 function generatePassword(length = 16){ //fonction qui génère une mot de passe fort aléatoire
-    const chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+~`|}{[]:;?><,./-=";
+    const chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*€()_+~`|}{[]:;?><,./-=";
     let password = "";
     const array = new Uint32Array(length);
     window.crypto.getRandomValues(array);
@@ -220,6 +220,7 @@ const inputEl = document.getElementById("inputMdp");
 const analyzeBtn = document.getElementById("analyzeBtn");
 const voirLeMdp = document.getElementById("voirLeMdp");
 const generatePwdBtn = document.getElementById("generatePwd");
+const generateSection = document.getElementById("generateSection");
 
 generatePwdBtn.addEventListener("click", function() { //fonction qui génère un mot de passe aléatoire et l'affiche
     const password = generatePassword();
@@ -249,6 +250,7 @@ analyzeBtn.addEventListener("click", function() { //fonction qui analyse le mdp 
     }
     
     updateUI(inputEl.value);
+    generateSection.style.display = 'block';
 });
 
 voirLeMdp.addEventListener("click", function() { //fonction qui permet de voir le mdp en clair 
@@ -263,3 +265,5 @@ voirLeMdp.addEventListener("click", function() { //fonction qui permet de voir l
 updateCharCount(inputEl.value);
 // Cache la barre de force au chargement de la page
 updateStrengthBar(0);
+// Cache la section de génération de mot de passe au chargement de la page
+generateSection.style.display = 'none';
